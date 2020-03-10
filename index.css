@@ -1,0 +1,7 @@
+* {
+    box-sizing: border-box;
+  }
+  video {
+      display:flex;
+      flex-direction: column;
+  }

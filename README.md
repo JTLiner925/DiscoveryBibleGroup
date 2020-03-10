@@ -6,15 +6,27 @@ so I could have multiple groups, but users only have access to their group.
 
 Task	Importance
 All users to view group night/contact info	High
+
+Any news/changes to group  Medium
+
 Lesson Bible passage display	High
+
 Lesson question display	High
+
 Notes to questions	Medium
+
 Prayer request section	High
+
 BIble read/search function	Medium
+
 groupMe Chat section	Medium
+
 Food signUp Genius	Low
+
 Accountability section	Medium
+
 Resouces section 	Low
+
 Quick Tutorial for new users, highlighting with instructions  Low
 
 API.bible
