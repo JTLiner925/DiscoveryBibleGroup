@@ -1,50 +1,34 @@
-const bibleSectionTitle = document.querySelector(`#section`);
-const bibleSectionList = document.querySelector(`#section-content`);
-const bibleVersionID = getParameterByName(`version`);
-const bibleSectionID = getParameterByName(`section`);
-const abbreviation = getParameterByName(`abbr`);
+const key = 'AIzaSyC8F-Vb3TOUgzstqyKRFmNnz4qq65jNf1A';
+const searchURL = 'https://www.youtube.com/';
 
-if (!bibleVersionID || !bibleSectionID) {
-  window.location.href = `./index.html`;
-}
+function getVideo(){
+  // GET `https://www.googleapis.com/youtube/v3/search?part=snippet&order=viewCount&q=${query}&type=video&videoDefinition=high&key=[YOUR_API_KEY]`
 
-getSelectedSection(bibleVersionID, bibleSectionID).then(({ content, title }) => {
-  bibleSectionTitle.innerHTML = `<span><i>${title}</i></span>`;
-  bibleSectionList.innerHTML = `<div class="eb-container">${content}</div>`;
-});
+  // Authorization: Bearer [YOUR_ACCESS_TOKEN]
+  // Accept: application/json
 
-const [book, section] = bibleSectionID.split(`.`);
-const breadcrumbsHTML = `
-  <ul>
-    <li><a href="book.html?version=${bibleVersionID}&abbr=${abbreviation}">${abbreviation}</a></li>
-    <li><a href="chapter.html?version=${bibleVersionID}&abbr=${abbreviation}&book=${book}">${book}</a></li>
-    <li>${section}</li>
-  </ul>
-`;
-breadcrumbs.innerHTML = breadcrumbsHTML;
-
-function getSelectedSection(bibleVersionID, bibleSectionID) {
-  return new Promise((resolve, reject) => {
-    const xhr = new XMLHttpRequest();
-    xhr.withCredentials = false;
-
-    xhr.addEventListener(`readystatechange`, function() {
-      if (this.readyState === this.DONE) {
-        const response = JSON.parse(this.responseText);
-        const fumsId = response.meta.fumsId;
-        const {content, title} = response.data;
-        const section = {content, title};
-
-        _BAPI.t(fumsId);
-        resolve(section);
+  fetch(`https://www.googleapis.com/youtube/v3/videos?id=oZcEY6qPV84&key=${key}
+  &part=snippet,contentDetails,statistics,status`)
+    .then(response => { 
+      if(response.ok){
+        return response.json();
       }
+      throw new Error(response.statusText);
+    })
+    .then(responseJson => console.log(responseJson))
+    .catch(err => { $('#js-error-message')
+      .text(`Something went wrong: ${err.message}`);
     });
-
-    xhr.open(`GET`, `https://api.scripture.api.bible/v1/bibles/${bibleVersionID}/sections/${bibleSectionID}?include-chapter-numbers=true&include-verse-spans=true`);
-    xhr.setRequestHeader(`api-key`, API_KEY);
-
-    xhr.onerror = () => reject(xhr.statusText);
-
-    xhr.send();
-  });
 }
+
+function watchForm(){
+  $('form').submit(event => {
+    event.preventDefault();
+    const searchTerm = $('').val();
+   
+    getVideo();
+  });
+  getVideo();
+}
+
+$(watchForm);
