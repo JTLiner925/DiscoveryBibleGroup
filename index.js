@@ -79,6 +79,7 @@ function displayResults(responseJson){
 </iframe>
       </li>`
     );}
+    $('#questions-section').removeClass('hidden');
   $('#results').removeClass('hidden');
 }
 
