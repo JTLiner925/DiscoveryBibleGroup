@@ -21,7 +21,7 @@
       </address>
       <details>
         <summary>Group Details</summary>
-        <p>Group starts at <time>6:00</time>pm Tuesday Night!</p>
+        <p>Group starts at 6:00pm Tuesday Night!</p>
         <p>Tonight we will be discussing new service opportunities.</p>
         <p>Next week, Tyler and Ashley Jones will be leading group</p>
         <address>
@@ -60,23 +60,21 @@
         </div>
       </section>
       <h2>Lesson</h2>
-      <form action="">
+      <form>
       <label for="lesson-select">Choose a lesson</label>
       <select id="lesson-select">
-        <option value="1">--Please choose an option--</option>
-        <option id="john1" class='verses' value="2">John1</option>
-        <option id="john2" class='verses' value="3">John 2</option>
-        <option id="john3" class='verses' value="4">John 3</option>
-        <option id="john4" class='verses' value="5">John 4</option>
-        <option id="john5" class='verses' value="6">John 5</option>
-        <option id="john6" class='verses' value="7">John 6</option>
+        <option value="">--Please choose an option--</option>
+        <option id="john1" class='verses' ytid='1' value="john+1:1-10">John1:1-10</option>
+        <option id="john2" class='verses' ytid='2' value="john+2">John 2</option>
+        <option id="john3" class='verses' ytid='3' value="john+3">John 3</option>
+        <option id="john4" class='verses' ytid='4' value="john+4">John 4</option>
       </select>
     </form>
     <section id="scripture" class="hidden" >
       <h3>Scripture Passage</h3>
       <p id="js-verse-error-message" class="error-message"></p>
         <ul id="bible-verses">
-          
+
         </ul>
         <!-- <cite class="bible-address"></cite> -->
       </section>
@@ -149,7 +147,7 @@
             <a href="rabbit320.mp4">link to the video</a> instead.
           </p>
         </video> -->
-      </section>
+      <!-- </section> -->
     </div>
     <script
       src="https://code.jquery.com/jquery-3.3.1.js"

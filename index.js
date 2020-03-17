@@ -6,9 +6,14 @@ const API_URL = 'https://api.esv.org/v3/passage/text/';
 
 // Authorization: Token ccbf0a4b9f501f9c1e71052941583c219e9c85ce
 
-// STORE ={
+const STORE ={
 
-// }
+  1:['oZcEY6qPV84','oZcEY6qPV84','oZcEY6qPV84'],
+  2:['Ej0WNwYGKHg','Ej0WNwYGKHg','Ej0WNwYGKHg'],
+  3:['Ej0WNwYGKHg','oZcEY6qPV84','oZcEY6qPV84'],
+  4:['oZcEY6qPV84','Ej0WNwYGKHg','Ej0WNwYGKHg'],
+
+}
 
 function formatQueryParams(params){
   const queryItems = Object.keys(params)
@@ -45,67 +50,71 @@ function getVerses(passage){
 
 }
 function displayVerses(resJson){
-  // console.log(resJson);
+  console.log(resJson);
   $('#bible-verses').empty();
-  for(let i = 0; i< resJson.length; i++){
-    $('#bible-verses').append(
-      `<li><h3>${resJson[i].data.canonical}</h3>
-      <p>${resJson[i].data.passages}</p></li>`
+  // for(let i = 0; i< resJson.length; i++){
+  $('#bible-verses').append(
+    `<li><h3>${resJson.canonical}</h3>
+      <p>${resJson.passages[0]}</p></li>`
       
-    );
+  );
   
-  }
+  // }
     
   $('#scripture').removeClass('hidden');
 }
 
 function displayResults(responseJson){
+  console.log(responseJson);
   $('#results-list').empty();
-  for(let i = 0; i< responseJson.items.length; i++){
+  for(let i = 0; i< responseJson.length; i++){
     $('#results-list').append(
-      `<li><h3>By ${responseJson.items[i].snippet.channelTitle}</h3>
-      <p>${responseJson.items[i].snippet.description}</p>
+      `<li><h3>By ${responseJson[i].items[0].snippet.channelTitle}</h3>
+      <p>${responseJson[i].items[0].snippet.description}</p>
       <iframe id="thumbnail"
-    title="${responseJson.items[i].snippet.title}"
+    title="${responseJson[i].items[0].snippet.title}"
     width="480"
-    height="360"
-    src="https://www.youtube.com/embed/${responseJson.items[i].id}" frameborder="0" controls>
+    height="380"
+    src="https://www.youtube.com/embed/${responseJson[i].items[0].id}" frameborder="0" controls>
 </iframe>
       </li>`
     );}
   $('#results').removeClass('hidden');
 }
 
-function getVideo(){
+function getVideo(lesson){
   // GET `https://www.googleapis.com/youtube/v3/search?part=snippet&order=viewCount&q=${query}&type=video&videoDefinition=high&key=[YOUR_API_KEY]`
 
   // Authorization: Bearer [YOUR_ACCESS_TOKEN]
   // Accept: application/json
-
-  fetch(`https://www.googleapis.com/youtube/v3/videos?id=oZcEY6qPV84&key=${key}&part=snippet,contentDetails,statistics,status`)
+  Promise.all(STORE[lesson].map(id => {
+    return fetch(`https://www.googleapis.com/youtube/v3/videos?id=${id}&key=${key}&part=snippet,contentDetails,statistics,status`)
     .then(response => { 
-      if(response.ok){
-        return response.json();
-      }
-      throw new Error(response.statusText);
+      
+      return response.json();
     })
-    .then(responseJson => displayResults(responseJson))
+    .then(responseJson => responseJson)
     .catch(err => { $('#js-error-message')
       .text(`Something went wrong: ${err.message}`);
     });
+  })).then(responseJson => {
+    console.log(responseJson);
+    return displayResults(responseJson);});
+  
 }
 
 function watchForm(){
-  $('#lesson-select ').change(event => {
+  let lessonSelect;
+  let youTubeId;
+  $('#lesson-select').change(event => {
     event.preventDefault();
     // const searchTerm = $('').val();
-    const lessonSelect = $('#lesson-select option:selected').text();
-    console.log(lessonSelect);
-    // getVideo();
-    console.log(getVerses(lessonSelect));
-    
+    youTubeId = $('#lesson-select option:selected').attr('ytid');
+    lessonSelect = $('#lesson-select option:selected').val();
+    getVerses(lessonSelect);
+    getVideo(youTubeId);
   });
-  getVideo();
+  
   
 }
 
