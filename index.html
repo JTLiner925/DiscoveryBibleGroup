@@ -60,33 +60,26 @@
         </div>
       </section>
       <h2>Lesson</h2>
+      <form action="">
       <label for="lesson-select">Choose a lesson</label>
       <select id="lesson-select">
-        <option value="">--Please choose an option--</option>
-        <option id="john1" value="John 1">John 1</option>
-        <option id="john2" value="John 2">John 2</option>
-        <option id="john3" value="John 3">John 3</option>
-        <option id="john4" value="John 4">John 4</option>
-        <option id="john5" value="John 5">John 5</option>
-        <option id="john6" value="John 6">John 6</option>
+        <option value="1">--Please choose an option--</option>
+        <option id="john1" class='verses' value="2">John1</option>
+        <option id="john2" class='verses' value="3">John 2</option>
+        <option id="john3" class='verses' value="4">John 3</option>
+        <option id="john4" class='verses' value="5">John 4</option>
+        <option id="john5" class='verses' value="6">John 5</option>
+        <option id="john6" class='verses' value="7">John 6</option>
       </select>
+    </form>
+    <section id="scripture" class="hidden" >
       <h3>Scripture Passage</h3>
-      <blockquote class="scripture">
-        <p class="bible-verses">
-          1In the beginning was the Word, and the Word was with God, and the
-          Word was God. 2He was with God in the beginning. 3All things were
-          created through him, and apart from him not one thing was created that
-          has been created. 4In him was life, and that life was the light of
-          men. 5That light shines in the darkness, and yet the darkness did not
-          overcome it. 6There was a man sent from God whose name was John. 7He
-          came as a witness to testify about the light, so that all might
-          believe through him. 8He was not the light, but he came to testify
-          about the light. 9The true light that gives light to everyone was
-          coming into the world. 10He was in the world, and the world was
-          created through him, and yet the world did not recognize him.”
-        </p>
-        <cite class="bible-address">John 1:1-10</cite>
-      </blockquote>
+      <p id="js-verse-error-message" class="error-message"></p>
+        <ul id="bible-verses">
+          
+        </ul>
+        <!-- <cite class="bible-address"></cite> -->
+      </section>
       
       <section class="questions-section">
         <h3>Questions</h3>

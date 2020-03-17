@@ -1,7 +1,62 @@
 const key = 'AIzaSyC8F-Vb3TOUgzstqyKRFmNnz4qq65jNf1A';
 const searchURL = 'https://www.youtube.com/';
-STORE ={
 
+const bibleKey = 'ccbf0a4b9f501f9c1e71052941583c219e9c85ce';
+const API_URL = 'https://api.esv.org/v3/passage/text/';
+
+// Authorization: Token ccbf0a4b9f501f9c1e71052941583c219e9c85ce
+
+// STORE ={
+
+// }
+
+function formatQueryParams(params){
+  const queryItems = Object.keys(params)
+    .map(key => `${key}=${params[key]}`);
+  return queryItems.join('&');
+}
+
+function getVerses(passage){
+  const params = {
+    q: passage, 
+  };
+  const queryString = formatQueryParams(params);
+  const url = API_URL + '?' + queryString;
+  console.log(url);
+
+  // const headers = {
+  //   'Authorization': bibleKey, 
+  // };
+  const options = {
+    headers: new Headers({
+      "Authorization": bibleKey})
+  };
+  fetch(url, options)
+    .then(response => { 
+      if(response.ok){
+        return response.json();
+      }
+      throw new Error(response.statusText);
+    })
+    .then(resJson => displayVerses(resJson))
+    .catch(err => { $('#js-verse-error-message')
+      .text(`Something went wrong: ${err.message}`);
+    });
+
+}
+function displayVerses(resJson){
+  // console.log(resJson);
+  $('#bible-verses').empty();
+  for(let i = 0; i< resJson.length; i++){
+    $('#bible-verses').append(
+      `<li><h3>${resJson[i].data.canonical}</h3>
+      <p>${resJson[i].data.passages}</p></li>`
+      
+    );
+  
+  }
+    
+  $('#scripture').removeClass('hidden');
 }
 
 function displayResults(responseJson){
@@ -21,12 +76,6 @@ function displayResults(responseJson){
   $('#results').removeClass('hidden');
 }
 
-/* <p>${responseJson.articles[i].description}</p>
-      <h4><a href="${responseJson.items[i].thumbnails.url}">${responseJson.items[i].title}</a></h4>
-<img src='${responseJson.articles[i].urlToImage}'> */
-function getLesson(){
-  
-}
 function getVideo(){
   // GET `https://www.googleapis.com/youtube/v3/search?part=snippet&order=viewCount&q=${query}&type=video&videoDefinition=high&key=[YOUR_API_KEY]`
 
@@ -47,14 +96,17 @@ function getVideo(){
 }
 
 function watchForm(){
-  $('form').submit(event => {
+  $('#lesson-select ').change(event => {
     event.preventDefault();
-    const searchTerm = $('').val();
-   
+    // const searchTerm = $('').val();
+    const lessonSelect = $('#lesson-select option:selected').text();
+    console.log(lessonSelect);
     // getVideo();
+    console.log(getVerses(lessonSelect));
+    
   });
   getVideo();
-  // getLesson();
+  
 }
 
 $(watchForm);
