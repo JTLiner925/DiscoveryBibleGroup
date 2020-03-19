@@ -181,6 +181,7 @@ function displayResults(responseJson){
     );}
   $('#questions-section').removeClass('hidden');
   $('#results').removeClass('hidden');
+  
 }
 
 function getVideo(lesson){
@@ -207,16 +208,31 @@ function getVideo(lesson){
 function watchForm(){
   let lessonSelect;
   let youTubeId;
-  $('#lesson-select').click( event => {
+  $('#lesson-select').change( event => {
     event.preventDefault();
     // const searchTerm = $('').val();
     // youTubeVid = STORE.stories.resources;
-    youTubeId = $('#lesson-select button').attr('ytid');
-    lessonSelect = $('#lesson-select button').val();
+    youTubeId = $('#lesson-select option:selected').attr('ytid');
+    lessonSelect = $('#lesson-select option:selected').val();
     getVerses(lessonSelect);
     getVideo(youTubeId);
   });
   
 }
+// function watchForm2(){
+//   let lessonSelect;
+//   let youTubeId;
+//   $('#lesson-select').on('click', event => {
+//     event.preventDefault();
+//     // const searchTerm = $('').val();
+//     // youTubeVid = STORE.stories.resources;
+//     youTubeId = $('button').attr('ytid');
+//     lessonSelect = $('button').val();
+//     getVerses(lessonSelect);
+//     getVideo(youTubeId);
+//   });
+  
+// }
 
 $(watchForm);
+// $(watchForm2);
