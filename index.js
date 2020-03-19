@@ -173,8 +173,8 @@ function displayResults(responseJson){
       
       <iframe id="thumbnail"
     title="${responseJson[i].items[0].snippet.title}"
-    width="480"
-    height="380"
+    width="320"
+    height="180"
     src="https://www.youtube.com/embed/${responseJson[i].items[0].id}" frameborder="0" controls>
 </iframe>
       </li>`
@@ -205,34 +205,31 @@ function getVideo(lesson){
   
 }
 
-function watchForm(){
-  let lessonSelect;
-  let youTubeId;
-  $('#lesson-select').change( event => {
-    event.preventDefault();
-    // const searchTerm = $('').val();
-    // youTubeVid = STORE.stories.resources;
-    youTubeId = $('#lesson-select option:selected').attr('ytid');
-    lessonSelect = $('#lesson-select option:selected').val();
-    getVerses(lessonSelect);
-    getVideo(youTubeId);
-  });
-  
-}
-// function watchForm2(){
+// function watchForm(){
 //   let lessonSelect;
 //   let youTubeId;
-//   $('#lesson-select').on('click', event => {
+//   $('#lesson-select').change( event => {
 //     event.preventDefault();
 //     // const searchTerm = $('').val();
 //     // youTubeVid = STORE.stories.resources;
-//     youTubeId = $('button').attr('ytid');
-//     lessonSelect = $('button').val();
+//     youTubeId = $('#lesson-select option:selected').attr('ytid');
+//     lessonSelect = $('#lesson-select option:selected').val();
 //     getVerses(lessonSelect);
 //     getVideo(youTubeId);
 //   });
   
 // }
+function watchForm2() {
+  let lessonSelect;
+  let youTubeId;
+  $("button").on("click", event => {
+    event.preventDefault();
+    youTubeId = $(event.target).attr("ytid");
+    lessonSelect = $(event.target).val();
+    getVerses(lessonSelect);
+    getVideo(youTubeId);
+  });
+}
 
-$(watchForm);
-// $(watchForm2);
+// $(watchForm);
+$(watchForm2);
