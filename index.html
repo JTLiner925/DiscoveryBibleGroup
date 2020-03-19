@@ -10,31 +10,39 @@
   </head>
   <body>
     <header>
+        <p>Group starts at 6:00pm Wednesday Night!</p>
       <h1>Discovery Bible Group</h1>
+      
     </header>
     <main>
-      <section>
+      <div class="pray-care">
+      <section id="care">
         <h2>Care</h2>
         <ul>
-          <li>What was your Hi/Lo for the week?</li>
-          <li>How can we be praying for you?</li>
+          <li>What's your Hi/Lo this week?</li>
+          <li>How can we help?</li>
         </ul>
       </section>
-      <section>
+      <section id="pray">
         <h2>Prayer</h2>
         <ul>
-          <li>Spend time praying for each other.</li>
+            <li>Ask for prayer requests.</li>
+          <li>Pray for each other.</li>
         </ul>
       </section>
-      <section id="lessons">
+    </div>
+      <section class="lessons">
         <h2>Lessons</h2>
         <form id="lesson-select">
+          <div class="verses2">
           <button class="verses" ytid="1" value="Luke+7:36-50">
             1. The Sinful Woman
           </button>
           <button class="verses" ytid="2" value="Luke+18:9-17">
             2. Who Can Come to God?
           </button>
+        </div>
+        <div class="verses3">
           <button class="verses" ytid="3" value="Matthew+18:21-35">
             3. Forgiveness
           </button>
@@ -44,16 +52,19 @@
           <button class="verses" ytid="5" value="Mark+2:1-12">
             5. Who is Jesus?
           </button>
+        </div>
+        <div class="verses2">
           <button class="verses" ytid="6" value="Luke+23:32-50">
             6. Crucifixion
           </button>
           <button class="verses" ytid="7" value="John+3:1-21">
             7. Born Again
           </button>
+        </div>
         </form>
       </section>
       <section id="scripture" class="hidden">
-        <h3 id="title">Scripture</h3>
+        <!-- <h3 id="title">Scripture</h3> -->
         <p id="js-verse-error-message" class="error-message"></p>
         <ul id="bible-verses"></ul>
       </section>
@@ -76,29 +87,26 @@
         <p id="js-error-message" class="error-message"></p>
         <ul id="results-list"></ul>
       </section>
-      <section>
-        <h2>Contact Info</h2>
-        <address>
-          You can call Joe at
-          <a href="tel:+15555552368">(555) 555-2368</a>.<br />
-          You can email him at
-          <a href="mailto:joe.01@gmail.com"> contact group leader</a>.<br />
-        </address>
-        <details>
-          <summary>Group Details</summary>
-          <p>Group starts at 6:00pm Wednesday Night!</p>
-          <p>
-            Tonight we will be discussing new service opportunities.<br />
-            Also, we will discussing upcoming Fishing opportunities
-          </p>
-          <p>Next week, Greg and Alice will be leading group</p>
+      <section class='group-info '>
+        <div id='group-title'>
+          <h3>Group Details</h3>
+        </div>
+          <div class="group">
+          <div class='group-loc'>
           <address>
-            Group will be held at:<br />
-            331 E Evelyn Ave<br />
+            <b>Address</b><br />
+            331 E Evelyn Ave, <br>
             Georgetown, TX 78628<br />
-            USA<br />
           </address>
-        </details>
+        </div>
+        <div class='group-loc'>
+            <address>
+              <b>Contact Group Leader</b><br>
+                <a href="tel:+15555552368">(555) 555-2368</a>.<br />
+                <a href="mailto:joe.01@gmail.com"> email leader</a>.<br />
+            </address>
+          </div>
+      </div>
       </section>
     </main>
     <script
