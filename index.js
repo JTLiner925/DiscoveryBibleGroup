@@ -149,6 +149,7 @@ function getVerses(passage){
 }
 function displayVerses(resJson){
   console.log(resJson);
+  
   $('#bible-verses').empty();
   // for(let i = 0; i< resJson.length; i++){
   $('#bible-verses').append(
@@ -206,16 +207,15 @@ function getVideo(lesson){
 function watchForm(){
   let lessonSelect;
   let youTubeId;
-  $('#lesson-select').change(event => {
+  $('#lesson-select').click( event => {
     event.preventDefault();
     // const searchTerm = $('').val();
-    youTubeVid = STORE.stories.resources;
-    youTubeId = $('#lesson-select option:selected').attr('ytid');
-    lessonSelect = $('#lesson-select option:selected').val();
+    // youTubeVid = STORE.stories.resources;
+    youTubeId = $('#lesson-select button').attr('ytid');
+    lessonSelect = $('#lesson-select button').val();
     getVerses(lessonSelect);
     getVideo(youTubeId);
   });
-  
   
 }
 
