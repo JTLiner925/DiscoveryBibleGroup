@@ -67,7 +67,7 @@ header p{
 #care {
     display: flex;
     color: #ffffff;
-  height: 70%;
+  height: 90%;
   justify-content: space-around;
   align-content: center;
   align-items: center;
@@ -98,6 +98,7 @@ flex-direction: column;
 .questions{
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 /* #pray{
     background-image: url(./pray-light.jpg);
