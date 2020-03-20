@@ -153,8 +153,8 @@ function displayVerses(resJson){
   $('#bible-verses').empty();
   // for(let i = 0; i< resJson.length; i++){
   $('#bible-verses').append(
-    `<li><h3>${resJson.canonical}</h3>
-    <h4>Read passage 2X / Rebuild it.</h4>
+    `<h2 id="title">${resJson.canonical}</h2><li>
+    <h3>Read passage 2X / Rebuild it.</h3>
       <p>${resJson.passages[0]}</p></li>`
       
   );

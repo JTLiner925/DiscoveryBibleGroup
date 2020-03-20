@@ -7,7 +7,7 @@ body {
   /* margin-right: 10px;
   margin-left: 10px; */
   background-color:#fcfdfef8; 
-}
+  font-family: 'Righteous', cursive;}
 header {
     background-image: url(./light-banner.jpg);
   background-repeat: no-repeat;
@@ -37,12 +37,15 @@ text-shadow:0 0 2px   #fac575;
   font-size: 48px;
   /* background: linear-gradient(45deg, rgba(0, 0, 0, 0.419), rgba(255, 255, 255, 0)); */
 }
+p{
+    font-family: 'Share', cursive;
+}
 header p{
     
     height: 60px;
     color: #fac575;
     font-size: 20px;
-    background-color:#141107b6;
+    background-color: #1d1d1d;
     box-shadow: 0 1px 29px 0 rgba(5, 5, 5, .938);
     margin: 0;
 }
@@ -71,11 +74,12 @@ header p{
   width: 100%;
   font-size: 18px;
   font-weight: bold;
-  background-color: #000000;
+  background-color: #1d1d1d;
   padding:10px;
 }
 #questions-section{
 display: flex;
+flex-direction: column;
 /* align-items: center; */
 /* color: #ffffff; */
   height: 70%;
@@ -88,12 +92,13 @@ display: flex;
   padding:10px;
   margin-top: 50px;
   margin-bottom: 50px;
-  box-shadow: 1px 1px 9px 1px rgba(5, 5, 5, 0.938);
+  /* box-shadow: 1px 1px 9px 1px rgba(5, 5, 5, 0.938); */
 
 }
-/* .questions{
-    flex-direction: column;
-} */
+.questions{
+    display: flex;
+    flex-direction: row;
+}
 /* #pray{
     background-image: url(./pray-light.jpg);
     background-repeat: no-repeat;
@@ -111,7 +116,7 @@ img{
 
 
 .pray-care h2,
-.lessons h2, .questions-section h2 {
+.lessons h2, #questions-section h2, #results h2, #bible-verses h2 {
   font-size: 32px;
   font-weight: bold;
   color: #ffffff;
@@ -178,20 +183,22 @@ img{
   flex-direction: column;
 }
 button {
+    
     margin: 10px;
+    margin-bottom: 0;
     border: 0;
   color: #ffffff;
   /* height: 60%; */
   font-size: 20px;
   font-weight: bold;
   border-radius: 10px;
-  
-  background: linear-gradient(180deg, rgb(9, 9, 9, .9), rgba(242, 144, 39, 0.933), rgba(96, 69, 1, 0.8));
+  background-color: #2b2b2b;
+  /* background: linear-gradient(180deg, rgb(9, 9, 9, .9), rgba(242, 144, 39, 0.933), rgba(96, 69, 1, 0.8)); */
   box-shadow: 1px 1px 9px 1px rgba(5, 5, 5, 0.938);
   
 }
 button:hover {
-  background-color: #669eb396;
+  background-color: #2b2a2ab4;
   transition-duration: 1s;
 }
 .verses2{
@@ -233,10 +240,13 @@ height: 400px;
 overflow: auto;
 margin: 0;
   padding: 50px;
-  background-color: #000000;
+  background-color: #1d1d1d;
   box-shadow: 0 1px 29px 0 rgba(5, 5, 5, .938);
   /* background: linear-gradient(180deg, rgb(9, 9, 9, .9), rgba(242, 161, 39, 0.933)); */
   /* margin-bottom: 20px; */
+}
+#bible-verses p {
+    font-size: 18px;
 }
 /* #bible-verses li {
   max-width: 500px;
@@ -252,14 +262,20 @@ margin: 0;
   line-height: 1.5;
   margin: 0;
 }
+#questions-section h2{
+    color: #1d1d1d;
+
+}
 #questions-section {
     /* margin: 0; */
   padding-top: 20px;
   padding-bottom: 20px;
   padding: 10px;
-  color: #ffffff;
+  /* color: #ffffff; */
+  color: #1d1d1d;
+
 /* background-color: #000000; */
-background: linear-gradient(180deg, rgb(9, 9, 9, .9), rgba(242, 144, 39, 0.933), rgba(96, 69, 1, 0.8));
+/* background: linear-gradient(180deg, rgb(9, 9, 9, .9), rgba(242, 144, 39, 0.933), rgba(96, 69, 1, 0.8)); */
 
 }
 
@@ -275,7 +291,7 @@ background: linear-gradient(180deg, rgb(9, 9, 9, .9), rgba(242, 144, 39, 0.933),
 }
 #results {
     color: #ffffff;
-background-color: #000000;
+    background-color: #1d1d1d;
     padding-bottom: 50px;
     box-shadow: 0 1px 9px 0 rgba(5, 5, 5, 0.938); 
 
@@ -336,7 +352,7 @@ ul {
   flex-direction: column;
   justify-content: center;
   padding-bottom: 10px;
-  background-color:#00000097;
+  background-color: #1d1d1d;
 }
 .group {
   font-style: normal;
@@ -361,25 +377,29 @@ ul {
   display: none;
 }
 @media screen and (min-width: 650px) {
-    .pray-care, .questions {
+    .pray-care, #questions-section {
         display: flex;
         flex-direction: column;
     }
-#pray, #care, #questions-section{
+
+#pray, #care, .questions{
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
     
 }
 #questions-section{
-    height: 350px;
+    height: 400px;
 }
-.care1, .pray2, .question2{
+.care1, .pray2{
     width: 100%;
     display: flex;
     align-content: center;
     justify-content: center;
 }
-#pray p, #care p, .questions p, .questions h3 {
+#pray p, #care p {
   height: 50%;
   display: flex;
   /* flex-direction: column; */
@@ -401,11 +421,11 @@ img{
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    border: 1px solid #ffffff;
+    border: 1px solid #fca82b;
     margin: 10px;
     
 }
- .care2 p, .questions p{
+ .care2 p{
      padding: 0;
     padding-left: 10px;
 
