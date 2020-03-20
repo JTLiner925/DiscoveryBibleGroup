@@ -1,31 +1,31 @@
 * {
-    box-sizing: border-box;
-  }
-  html, body{
-      margin: 0;
-      /* background-color:#038ad379;  */
-      /* background-color:#f68121; */
-
-  }
-   header{
-       display: flex;
-       flex-direction: column;
-      margin: 0;
-      background: linear-gradient(10deg, rgba(79, 194, 223, 0.932), rgba(249, 249, 249, 0.959));
-      height: 150px;
-      width: 1;
-      justify-content: center;
-      text-align: center;
-      box-shadow: 0 1px 9px 0 rgba(5, 5, 5, 0.938);
-  }
-  h1{
-      height: 120px;
-      font-size: 36px;
-  }
-  header p{
-      background-color: rgba(255, 255, 255, 0.769);
-  }
-  /* section {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  /* background-color:#038ad379;  */
+  /* background-color:#f68121; */
+}
+header {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  /* background-color: #ffffff5a; */
+  height: 150px;
+  width: 1;
+  justify-content: center;
+  text-align: center;
+  /* box-shadow: 0 1px 9px 0 rgba(5, 5, 5, 0.938); */
+}
+h1 {
+  height: 120px;
+  font-size: 48px;
+}
+header p {
+  background-color: rgba(255, 255, 255, 0.769);
+}
+/* section {
       padding-top: 10px;
       line-height: 1.7;
     margin: 0;
@@ -34,53 +34,57 @@
     text-align: left;
     box-shadow: 0 1px 9px 0 rgba(5, 5, 5, 0.938);
   } */
-  .pray-care{
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      height:200px;
-      /* background-color:#ffffff;  */
-  }
-  #pray, #care{
-      color: #e1e3e4;
-      height: 70%;
-      border-radius: 10px;
-      align-content: center;
-      align-items: center;
-      width: 45%;
-      background-color: #2e8fb37a;
-      font-size: 18px;
-      font-weight: bold;
-      box-shadow: 0 1px 9px 0 rgba(5, 5, 5, 0.938);
-  }
- #pray h2, #care h2, .lessons h2{
-     font-size: 32px;
-    font-weight: bold;
-     color: #ffffff;
-     display: flex;
-     text-align: center;
-     margin: 0;
-     justify-content: center;
-     padding-top: 10px;
-     padding-bottom: 10px;
-     
+.pray-care {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 200px;
+  /* background-color:#ffffff;  */
+}
+#pray,
+#care {
+  color: #e1e3e4;
+  height: 70%;
+  border-radius: 10px;
+  align-content: center;
+  align-items: center;
+  width: 45%;
+  background-color: #2e8fb37a;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 1px 9px 0 rgba(5, 5, 5, 0.938);
+}
+#pray h2,
+#care h2,
+.lessons h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffffff;
+  display: flex;
+  text-align: center;
+  margin: 0;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#pray ul,
+#care ul {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style-type: none;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  padding-left: 10px;
+}
+.lessons{
+    background: linear-gradient(180deg, rgba(1, 85, 116, 0), rgba(0, 0, 0, 0.757));
+
  }
- #pray ul, #care ul{
-     height: 50%;
-     display: flex;
-     flex-direction: column;
-     align-items: flex-start;
-     list-style-type: none;
-     line-height: 1.5;
-     margin: 0;
-     padding: 0;
-     justify-content: center;
-     padding-left: 10px;
- }
- /* .lessons{
-    background-color:#f68121;
- } */
- /* #lesson-select{
+/* #lesson-select{
      display: flex;
      flex-direction: row;
      justify-content: center;
@@ -88,128 +92,134 @@
      height: 80%;
      
  } */
- .top-section {
-    background-image: url(./water.jpg);
-    background-repeat: no-repeat;
-    background-size: cover; 
- }
- #lesson-select{
-    height: 450px;
+.top-section {
     
-    /* justify-content: space-around; */
-      align-items: center;
-     display: flex;
-     flex-direction: column;
-     /* box-shadow: 0 1px 9px 0 rgba(5, 5, 5, 0.938); */
-     /* width: 100%; */
- }
- /* .lessons h2{
+  background-image: url(./water.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#lesson-select {
+  height: 450px;
+
+  /* justify-content: space-around; */
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  /* box-shadow: 0 1px 9px 0 rgba(5, 5, 5, 0.938); */
+  /* width: 100%; */
+}
+/* .lessons h2{
      width: 100%;
      display: flex;
  } */
- button {
-     color: #ffffff;
-     /* display: flex;
+button {
+  color: #ffffff;
+  /* display: flex;
      flex-direction: row; */
-    height: 60%;
-    /* width: 80%; */
-    border-radius: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    /* align-content: center; */
-    /* align-items: center; */
-    /* width: 45%; */
-    background-color: #2e90b325;
-    box-shadow: 0 1px 9px 0 rgba(5, 5, 5, 0.938);
-    /* justify-content: space-around; */
- }
- button:hover{
-    background-color: #669eb396;
-    transition-duration: 1s;
+  height: 60%;
+  /* width: 80%; */
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  /* align-content: center; */
+  /* align-items: center; */
+  /* width: 45%; */
+  background-color: #2e90b325;
+  box-shadow: 0 1px 9px 0 rgba(5, 5, 5, 0.938);
+  /* justify-content: space-around; */
+}
+button:hover {
+  background-color: #669eb396;
+  transition-duration: 1s;
+}
+.verses {
+  width: 160px;
+  /* justify-content: space-around; */
+}
+.verses2 {
+  display: flex;
+  flex-direction: row;
 
- }
- .verses{
-    width: 160px;
-    /* justify-content: space-around; */
- }
- .verses2 {
-    display: flex;
-    flex-direction: row;
-    
-      align-content: center;
-      align-items: center;
-      height: 120px;
-     width: 100%;
-     justify-content: space-evenly;
- }
- .verses1 {
-    display: flex;
-      align-content: center;
-      align-items: center;
-      height: 120px;
-     width: 100%;
-      justify-content: space-around;
- 
- }
-  h2,h3 {
-      padding-left: 10px;
-      padding-top: 20px;
-      margin: 0;
-  }
-  #bible-verses {
-    background-color:#75591282; 
-    padding-left: 10px;
-    padding-right: 10px;
-    /* max-width: 500px; */
-  }
-  #bible-verses li {
-      max-width: 500px;
-      margin: 0 auto;
-      padding-bottom: 20px;
-
-  }
-  #scripture {
-    background-color:#12752682; 
-
-  }
-  #questions-section, #scripture{
-      /* padding-left: 10px; */
-      line-height: 1.5;
-      margin: 0;
-      
-  }
-  #questions-section{
-      padding-top: 20px;
-      padding-bottom: 20px;
-      background-color: #ffffff;
-  }
-  /* #results, #lessons{
+  align-content: center;
+  align-items: center;
+  height: 120px;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.verses1 {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 120px;
+  width: 100%;
+  justify-content: space-around;
+}
+h2,
+h3 {
+  padding-left: 10px;
+  padding-top: 20px;
+  margin: 0;
+}
+#bible-verses {
+    background: linear-gradient(360deg, rgba(1, 85, 116, 0.899), rgba(0, 0, 0, 0.986));
+color: #ffffff;
+  /* background-color: #01364f; */
+  padding-left: 10px;
+  padding-right: 10px;
+  /* max-width: 500px; */
+}
+#bible-verses li {
+  max-width: 500px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+#scripture {
+  background-color: #12752682;
+}
+#questions-section,
+#scripture {
+  /* padding-left: 10px; */
+  line-height: 1.5;
+  margin: 0;
+}
+#questions-section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #ffffff;
+  background: linear-gradient(180deg, rgba(1, 85, 116, 0.899), rgba(139, 191, 226, 0.986));
+}
+/* #results, #lessons{
       padding-left: 0;
   } */
-  #scripture, #results{
-      margin: 0;
-      /* padding-right: 10px; */
-      box-shadow: 0 1px 9px 0 rgba(5, 5, 5, 0.938);
-      background-color: #ffffff;
+#scripture,
+#results {
+  margin: 0;
+  /* padding-right: 10px; */
+  /* box-shadow: 0 1px 9px 0 rgba(5, 5, 5, 0.938); */
+  background-color: #ffffff;
+}
+#results {
+    color: #ffffff;
+    background: linear-gradient(360deg, rgba(1, 85, 116, 0.899), rgba(139, 191, 226, 0.986));
 
-  }
-  #results h2{
-      margin: 0;
-  }
-  p, li{
-      
-      /* padding-bottom: 10px; */
-      margin: 0;
-  }
-  ul{
-      padding: 0;
-    list-style-type: none;
-    margin: 0;
-  } 
-  /* form {
+}
+#results h2 {
+  margin: 0;
+}
+p,
+li {
+  /* padding-bottom: 10px; */
+  margin: 0;
+}
+ul {
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+}
+/* form {
       margin: 0;
   } */
-  /* button{
+/* button{
       margin: 0;
       display: flex;
       flex-direction: column;
@@ -218,43 +228,42 @@
       justify-content: center;
       align-items: center;
   } */
-   #thumbnail {
-      display:flex; 
-       width: 480;
-    height: 380; 
-       flex-direction: column;
-      justify-content: center;
-      margin: 0 auto; 
-       align-content: center; 
-      
-   } 
-  .group-info{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding-bottom: 10px;
-      background-color:#f68121;
-  }
-  .group{
-      font-style: normal;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      line-height: 1.2;
-      /* flex-direction: row; */
-      /* width: 100%; */
-      /* margin: 0 auto; */
-  }
-  #group-title{
-    text-align: center;
-    line-height: 1.5;
-    /* display: flex; */
-    justify-content: space-around;
-    
-  }
-  /* .group-news, .group-loc{
+#thumbnail {
+  display: flex;
+  width: 480;
+  height: 380;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  align-content: center;
+}
+.group-info {
+    color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 10px;
+  background: linear-gradient(180deg, rgba(1, 85, 116, 0.899), rgba(161, 206, 236, 0.986));
+}
+.group {
+  font-style: normal;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  line-height: 1.2;
+  /* flex-direction: row; */
+  /* width: 100%; */
+  /* margin: 0 auto; */
+}
+#group-title {
+  text-align: center;
+  line-height: 1.5;
+  /* display: flex; */
+  justify-content: space-around;
+}
+/* .group-news, .group-loc{
       width: 50%;
   } */
-  .hidden {
-    display: none;
-  }
+.hidden {
+  display: none;
+}
