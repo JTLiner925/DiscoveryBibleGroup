@@ -170,14 +170,13 @@ function displayResults(responseJson){
   $('#results-list').empty();
   for(let i = 0; i< responseJson.length; i++){
     $('#results-list').append(
-      `<li><h3>By ${responseJson[i].items[0].snippet.title}</h3>
-      
+      `<li id='vid-title'>
       <iframe id="thumbnail"
     title="${responseJson[i].items[0].snippet.title}"
     width="320"
     height="180"
     src="https://www.youtube.com/embed/${responseJson[i].items[0].id}" frameborder="0" controls>
-</iframe>
+</iframe><h3>By ${responseJson[i].items[0].snippet.title}</h3>
       </li>`
     );}
   $('#questions-section').removeClass('hidden');
