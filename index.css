@@ -57,7 +57,7 @@ header p{
   flex-direction: column;
   /* justify-content: space-around; */
   align-items: center;
-  height: 600px;
+  height: 650px;
   /* background-color: #000000; */
   box-shadow: 0 1px 29px 0 rgba(5, 5, 5, .938);
 
@@ -67,7 +67,7 @@ header p{
 #care {
     display: flex;
     color: #ffffff;
-  height: 90%;
+  height: 100%;
   justify-content: space-around;
   align-content: center;
   align-items: center;
