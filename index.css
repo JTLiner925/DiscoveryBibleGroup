@@ -63,13 +63,13 @@ header p{
   
 }
 #pray{
-    background-image: url(/pray-light.jpg);
+    background-image: url(./pray-light.jpg);
     background-repeat: no-repeat;
   background-size: contain;
   background-position-x: 100%;
 }
 #care{
-    background-image: url(/serve.jpg);
+    background-image: url(./serve.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
   background-size: contain;

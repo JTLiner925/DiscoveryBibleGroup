@@ -160,7 +160,8 @@ function displayVerses(resJson){
   );
   
   // }
-    
+  $('#bottom-section').removeClass('hidden');
+
   $('#scripture').removeClass('hidden');
 }
 
