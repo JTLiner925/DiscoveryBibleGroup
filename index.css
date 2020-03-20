@@ -4,63 +4,98 @@
 html,
 body {
   margin: 0;
-  /* background-color:#038ad379;  */
-  /* background-color:#f68121; */
+  /* margin-right: 10px;
+  margin-left: 10px; */
+  background-color:#fcfdfef8; 
 }
 header {
+    background-image: url(./water.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
-  margin: 0;
-  /* background-color: #ffffff5a; */
-  height: 150px;
+  margin-left: 0;
+  margin-bottom: 50px;
+  height: 350px;
   width: 1;
   justify-content: center;
   text-align: center;
-  /* box-shadow: 0 1px 9px 0 rgba(5, 5, 5, 0.938); */
+  box-shadow: 0 1px 9px 0 rgba(5, 5, 5, 0.938);
 }
 h1 {
-  height: 120px;
-  font-size: 48px;
-}
-header p {
-  background-color: rgba(255, 255, 255, 0.769);
-}
-/* section {
-      padding-top: 10px;
-      line-height: 1.7;
+    color: #08181f;
     margin: 0;
-    background-color: aqua;
-    width: 1;
-    text-align: left;
-    box-shadow: 0 1px 9px 0 rgba(5, 5, 5, 0.938);
-  } */
+  height: 350px;
+  font-size: 48px;
+  background: linear-gradient(180deg, rgba(1, 85, 116, 0), rgba(0, 0, 0, 0.257));
+}
+header p{
+    height: 30px;
+    color: #ffffff;
+    background-color:#0a1f29f8;
+    box-shadow: 0 1px 29px 0 rgba(5, 5, 5, .938);
+ 
+}
 .pray-care {
+    margin-right: 20px;
+  margin-left: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 200px;
-  /* background-color:#ffffff;  */
+  height: 700px;
+  background-color: #000000;
+  box-shadow: 0 1px 29px 0 rgba(5, 5, 5, .938);
+
+  /* background: linear-gradient(100deg, rgba(4, 4, 4, 0.372), rgb(0, 0, 0)); */
 }
 #pray,
 #care {
-  color: #e1e3e4;
+    display: flex;
+  color: #ffffff;
   height: 70%;
-  border-radius: 10px;
+  justify-content: space-around;
   align-content: center;
   align-items: center;
-  width: 45%;
-  background-color: #2e8fb37a;
+  width: 100%;
   font-size: 18px;
   font-weight: bold;
-  box-shadow: 0 1px 9px 0 rgba(5, 5, 5, 0.938);
+  
 }
-#pray h2,
-#care h2,
+#pray{
+    background-image: url(/pray-light.jpg);
+    background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: 100%;
+}
+#care{
+    background-image: url(/serve.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: 0;
+}
+
+.pray-care h2,
 .lessons h2 {
   font-size: 32px;
   font-weight: bold;
   color: #ffffff;
   display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.lessons h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #08181f;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   margin: 0;
   justify-content: center;
@@ -72,110 +107,97 @@ header p {
   height: 50%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  /* align-items: flex-start; */
+  align-content: center;
   list-style-type: none;
   line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  justify-content: center;
-  padding-left: 10px;
-}
-.lessons{
-    background: linear-gradient(180deg, rgba(1, 85, 116, 0), rgba(0, 0, 0, 0.757));
+  margin: 0 ;
+  /* padding: 10px; */
+  /* justify-content: center; */
+  /* padding-left: 10px; */
 
+}
+.care2, .pray1{
+    background-color: #00000080;
+    padding: 10px;
+    width: 100%;
+
+ /* .care2 ul{
+     padding: 0;
+    /* padding-left: 10px; */
+
+     /* padding-left: 20px; */
+ } 
+ .care1{
+     width: 0;
  }
-/* #lesson-select{
-     display: flex;
-     flex-direction: row;
-     justify-content: center;
-     text-align: center;
-     height: 80%;
-     
- } */
-.top-section {
-    
-  background-image: url(./water.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+
+.lessons{
+    margin-right: 10px;
+  margin-left: 10px;
+    margin-bottom: 50px;
 }
 #lesson-select {
-  height: 450px;
-
-  /* justify-content: space-around; */
-  align-items: center;
+  /* height: 450px; */
+  /* align-items: center; */
   display: flex;
   flex-direction: column;
-  /* box-shadow: 0 1px 9px 0 rgba(5, 5, 5, 0.938); */
-  /* width: 100%; */
 }
-/* .lessons h2{
-     width: 100%;
-     display: flex;
- } */
 button {
+    border: 0;
   color: #ffffff;
-  /* display: flex;
-     flex-direction: row; */
-  height: 60%;
-  /* width: 80%; */
-  border-radius: 10px;
+  /* height: 60%; */
   font-size: 20px;
   font-weight: bold;
-  /* align-content: center; */
-  /* align-items: center; */
-  /* width: 45%; */
-  background-color: #2e90b325;
-  box-shadow: 0 1px 9px 0 rgba(5, 5, 5, 0.938);
-  /* justify-content: space-around; */
+  background: linear-gradient(180deg, rgba(1, 162, 221, 0.932), rgba(1, 92, 119, 0.911));
+  box-shadow: 1px 1px 9px 1px rgba(5, 5, 5, 0.938);
 }
 button:hover {
   background-color: #669eb396;
   transition-duration: 1s;
 }
-.verses {
-  width: 160px;
-  /* justify-content: space-around; */
-}
-.verses2 {
-  display: flex;
-  flex-direction: row;
 
+.verses {
+  display: flex;
+  flex-direction: column;
+    margin: 0 auto;
   align-content: center;
   align-items: center;
-  height: 120px;
-  width: 100%;
+  height: 80px;
+  width: 80%;
   justify-content: space-evenly;
 }
-.verses1 {
-  display: flex;
-  align-content: center;
-  align-items: center;
-  height: 120px;
-  width: 100%;
-  justify-content: space-around;
-}
+
 h2,
 h3 {
   padding-left: 10px;
   padding-top: 20px;
   margin: 0;
 }
+#bottom-section{
+    margin-right: 20px;
+  margin-left: 20px;
+    color: #ffffff;
+    padding-bottom: 50px;
+    padding-left: 10px;
+  padding-right: 10px;
+  box-shadow: 0 1px 29px 0 rgba(5, 5, 5, .938);
+/* margin-bottom: 50px; */
+background: linear-gradient(180deg, rgba(157, 221, 245, 0.899), rgba(0, 49, 75, 0.986));
+}
 #bible-verses {
-    background: linear-gradient(360deg, rgba(1, 85, 116, 0.899), rgba(0, 0, 0, 0.986));
 color: #ffffff;
-  /* background-color: #01364f; */
   padding-left: 10px;
   padding-right: 10px;
-  /* max-width: 500px; */
 }
-#bible-verses li {
+/* #bible-verses li {
   max-width: 500px;
   margin: 0 auto;
   padding-bottom: 20px;
-}
-#scripture {
-  background-color: #12752682;
-}
+} */
+/* #scripture {
+  background-color: #fcfefd00;
+} */
 #questions-section,
 #scripture {
   /* padding-left: 10px; */
@@ -186,7 +208,7 @@ color: #ffffff;
   padding-top: 20px;
   padding-bottom: 20px;
   color: #ffffff;
-  background: linear-gradient(180deg, rgba(1, 85, 116, 0.899), rgba(139, 191, 226, 0.986));
+  /* background: linear-gradient(180deg, rgba(1, 85, 116, 0.899), rgba(139, 191, 226, 0.986)); */
 }
 /* #results, #lessons{
       padding-left: 0;
@@ -196,11 +218,11 @@ color: #ffffff;
   margin: 0;
   /* padding-right: 10px; */
   /* box-shadow: 0 1px 9px 0 rgba(5, 5, 5, 0.938); */
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
 }
 #results {
     color: #ffffff;
-    background: linear-gradient(360deg, rgba(1, 85, 116, 0.899), rgba(139, 191, 226, 0.986));
+    /* background: linear-gradient(360deg, rgba(1, 85, 116, 0.899), rgba(139, 191, 226, 0.986)); */
 
 }
 #results h2 {
@@ -232,18 +254,18 @@ ul {
   display: flex;
   width: 480;
   height: 380;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: center;
   margin: 0 auto;
   align-content: center;
 }
 .group-info {
-    color: #ffffff;
+    color: #0a1f29f8;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-bottom: 10px;
-  background: linear-gradient(180deg, rgba(1, 85, 116, 0.899), rgba(161, 206, 236, 0.986));
+  background-color:#ffffff00;
 }
 .group {
   font-style: normal;
@@ -266,4 +288,45 @@ ul {
   } */
 .hidden {
   display: none;
+}
+@media screen and (min-width: 550px) {
+    .pray-care{
+        display: flex;
+        flex-direction: column;
+    }
+#pray, #care{
+    display: flex;
+    flex-direction: row;
+}
+.care1, .pray2{
+    width: 100%;
+    /* display: flex;
+    align-content: center;
+    justify-content: center; */
+}
+#pray ul, #care ul {
+  height: 50%;
+  display: flex;
+  /* flex-direction: column; */
+  /* align-items: flex-start; */
+  align-content: center;
+  list-style-type: none;
+  line-height: 1.5;
+  margin: 0 ;
+  padding: 10px; 
+  justify-content: center; 
+  /* padding-left: 10px; */
+
+}
+.care2, .pray1{
+    background-color: #00000000;
+    /* padding: 10px; */
+    /* width: 100%; */
+}
+ .care2 ul{
+     padding: 0;
+    padding-left: 10px;
+
+     padding-left: 20px;
+ } 
 }
