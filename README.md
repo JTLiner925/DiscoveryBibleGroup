@@ -1,8 +1,10 @@
 Discovery Bible Group
 
-Live site: https://jtliner925.github.io/api-hack-capstone-jt/
+Live site: https://jtliner925.github.io/DiscoveryBibleGroup/
 
+Portfolio Live site: https://jtliner925.github.io/jt-portfolio/
 
+HTML/CSS/JS/jQuery
 
 
 At this stage I don't have a sign in. This will only be for one group. 
