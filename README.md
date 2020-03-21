@@ -21,3 +21,6 @@ https://developers.google.com/youtube/v3
 
 create Bible study group web-app that allows people to get all the info needed for upcoming
 group. Look at group details ahead of time, help to facilitate questions, answers, and prayer request during group. 
+![](/Screen%20Shot%202020-03-21%20at%202.39.19%20PM.png)
+![](/Screen%20Shot%202020-03-21%20at%202.39.42%20PM.png)
+![](/Screen%20Shot%202020-03-21%20at%202.40.12%20PM.png)
