@@ -156,6 +156,7 @@ function displayResults(responseJson){
 </iframe><h3>By ${responseJson[i].items[0].snippet.title}</h3>
       </li>`
     );}
+  $('#lg-section2').removeClass('hidden');
   $('#questions-section').removeClass('hidden');
   $('#results').removeClass('hidden');
 }
@@ -186,4 +187,5 @@ function watchForm2() {
     getVideo(youTubeId);
   });
 }
+
 $(watchForm2);
