@@ -8,26 +8,23 @@ body {
   font-family: "Montserrat";
 }
 header {
-  background-image: url(./light-banner.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
   display: flex;
   flex-direction: column;
   margin-left: 0;
-  margin-bottom: 100px;
-  height: 350px;
+  margin-bottom: 50px;
+  height: 150px;
   width: 1;
   justify-content: center;
   text-align: center;
-  box-shadow: 0 1px 9px 0 rgba(5, 5, 5, 0.938);
 }
 h1 {
-  color: #08181f;
+  color: #0f0d02;
   margin: 0;
-  height: 350px;
+  margin-top: 20px;
+  height: 150px;
   display: flex;
-  text-shadow: 2px 1px #fac575;
-  text-shadow: 0 0 2px #fac575;
+  text-shadow: 2px 1px #fca82b;
+  text-shadow: 2px #fca82b;
   justify-content: center;
   align-items: center;
   font-size: 48px;
@@ -38,9 +35,9 @@ p {
 header p {
   height: 60px;
   color: #fac575;
-  font-size: 20px;
+  font-size: 16px;
   background-color: #1d1d1d;
-  box-shadow: 0 1px 29px 0 rgba(5, 5, 5, 0.938);
+  box-shadow: 1px 5px 29px 1px rgb(153, 92, 1);
   margin: 0;
 }
 .pray-care {
@@ -82,9 +79,10 @@ header p {
   flex-direction: row;
   align-items: center;
 }
+
 img {
-  width: 200px;
-  height: 200px;
+  width: 125px;
+  height: 125px;
   border-radius: 50%;
   border: 1px solid #fca82b;
 }
@@ -178,9 +176,7 @@ p {
   padding-top: 20px;
   margin: 0;
 }
-#bottom-section {
-  /* color: #ffffff; */
-}
+
 #bible-verses {
   color: #ffffff;
   height: 400px;
@@ -268,6 +264,22 @@ ul {
 .hidden {
   display: none;
 }
+@media screen and (min-width: 425px) {
+  .questions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid #fca82b;
+  }
+  header p {
+    font-size: 20px;
+  }
+}
 @media screen and (min-width: 650px) {
   .pray-care,
   #questions-section {
@@ -275,8 +287,13 @@ ul {
     flex-direction: column;
   }
   h1 {
-    font-size: 68px;
+    color: #0f0d02;
+    font-size: 54px;
+    text-shadow: 2px 1px #fca82b;
+    text-shadow: 4px #fca82b;
   }
+  
+
   .pray-care h2,
   .lessons h2,
   #questions-section h2,
