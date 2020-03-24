@@ -46,6 +46,7 @@ function getVerses(passage) {
 //display verses, dmove hidden class
 function displayVerses(resJson) {
   $('#bible-verses').empty();
+  $('#js-verse-error-message').empty();
   $('#bible-verses').append(
     `<h2 id="title">${resJson.canonical}</h2><li>
     <h3>Read passage 2X / Rebuild it.</h3>
@@ -57,10 +58,11 @@ function displayVerses(resJson) {
 //displays videos at results-list location.
 function displayResults(responseJson) {
   $('#results-list').empty();
+  $('#js-error-message').empty();
   for (let i = 0; i < responseJson.length; i++) {
     $('#results-list').append(
-      `<li id='vid-title'>
-      <iframe id="thumbnail"
+      `<li class='vid-title'>
+      <iframe class="thumbnail"
     title="${responseJson[i].items[0].snippet.title}"
     width="320"
     height="180"
@@ -105,7 +107,7 @@ function watchForm2() {
       },
       2000
     );
-    youTubeId = $(event.target).attr('ytid');
+    youTubeId = $(event.target).attr('data-ytid');
     lessonSelect = $(event.target).val();
     getVerses(lessonSelect);
     getVideo(youTubeId);

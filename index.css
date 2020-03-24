@@ -224,12 +224,12 @@ ul {
   display: flex;
   flex-direction: column;
 }
-#thumbnail {
+.thumbnail {
   width: 480;
   height: 380;
   border-radius: 20px;
 }
-#vid-title {
+.vid-title {
   padding-top: 40px;
   display: flex;
   flex-direction: column;
@@ -237,7 +237,7 @@ ul {
   align-items: center;
   overflow: hidden;
 }
-#vid-title h3 {
+.vid-title h3 {
   max-width: 350px;
   padding-top: 5px;
 }
@@ -355,16 +355,16 @@ ul {
     flex-direction: row;
     justify-content: space-evenly;
   }
-  #vid-title {
+  .vid-title {
     width: 23%;
     height: auto;
     justify-content: flex-start;
     margin: 0;
   }
-  #thumbnail {
+  .thumbnail {
     margin-bottom: 0;
   }
-  #vid-title h3 {
+  .vid-title h3 {
     max-width: 100%;
     padding-top: 5px;
   }
